@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Film;
 use App\Models\AlbumMusik;
 use App\Models\Siswa;
 use App\Models\Sekolah;
@@ -62,4 +63,8 @@ Route::get('album', function(){
 
 Route::get('film', function(){
     return view ('Film');
+});
+
+Route::get('film/{id}', function(int $id){
+    return view('detail-film', ['film' => Film::findOrFail($id)]);
 });

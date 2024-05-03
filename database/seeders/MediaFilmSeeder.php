@@ -101,9 +101,9 @@ class MediaFilmSeeder extends Seeder
         ]);
         MediaFilm::insert([
             'film_id' => 3,
-            'media_type' => 1,
-            'media_title' => 'Akhir Tak Bahagia',
-            'url_media' => 'https://www.youtube.com/watch?v=cyjrL-WQlDE',
+            'media_type' => 0,
+            'media_title' => 'Poto',
+            'url_media' => 'https://cdn.idntimes.com/content-images/community/2023/09/f5oq18vbmaavfmh-11daa12e95da990912787dab019b27d6-d1e9b0cb78a3decaeceb972885ce5bc4.jpg',
         ]);
     }
 }

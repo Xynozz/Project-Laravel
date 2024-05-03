@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('film_id')->constrained()->onDelete('cascade');
             $table->boolean('media_type')->default(0);
             $table->string('media_title')->default('-');
-            $table->string('url_media')->nullable();
+            $table->text('url_media')->nullable();
             $table->timestamps();
         });
     }
