@@ -1,24 +1,37 @@
-<h1>Judul Film :{{$film->judul}} </h1>
-<p>Deskripsi Film :{{$film->deskripsi}} </p>
+@extends('layout.layout')
+@section('content')
 
-{{-- Start One To One --}}
-<span>
-    Detail Film
-    <h4>Kode Film : {{$film->DetailFilm->code_film}} </h4> 
-    <h4>Url IMDB : <a href="{{$film->DetailFilm->url_imdb}}" target="_blank">
-        Klik disini</a> </h4> 
-</span>
-{{-- End One To One --}}
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">{{$film->judul}}</h1>
+            <p class="lead text-muted">{{$film->deskripsi}}</p>
+            <p>
+                <a href="{{$film->DetailFilm->url_imdb}}" class="btn btn-primary my-2">Lihat Halaman IMDB</a>
+                <a href="{{ url('/film')}}" class="btn btn-secondary my-2">Kembali Ke Home</a>
+            </p>
+        </div>
+    </div>
+</section>
 
-{{-- Start One To Many --}}
-@foreach ($film->MediaFilm as $item)
-    <p>Media Title : {{$item->media_title}}</p>
-    {{-- <p>Url Media : <a href="{{$item->url_media}}">Klik Disini</a></p> --}}
-    @if($item->media_type)
-        Url Media : <a href="{{$item->url_media}}">Klik Disini</a>
-    @else
-        <img src="{{$item->url_media}}" alt="" height="200px">
-    @endif
-    <hr>
-@endforeach
-{{-- End One To Many --}}
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            @foreach ($film->MediaFilm as $item)
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card shadow-sm">
+                        @if ($item->media_type)
+                        Url Media : {{$item->media_title}} <a href="{{ $item->url_media }}" align="center">Klik Disini</a>
+                        @else
+                        <img src="{{ $item->url_media }}" alt="" height="200px" width="200px" >
+                        @endif
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</div>
+@endsection
