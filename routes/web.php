@@ -5,8 +5,10 @@ use App\Models\AlbumMusik;
 use App\Models\Siswa;
 use App\Models\Sekolah;
 use Illuminate\Support\Facades\Route;
+// import controller
 use App\Http\Controllers\MyController;
-
+// import Movie Controller
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,3 +76,7 @@ Route::get('film/{id}', function(int $id){
 // Route With COntroller
 Route::get('perkenalan',[App\Http\Controllers\MyController::class,'introduce']);
 Route::get('hewan',[App\Http\Controllers\MyController::class,'animals']);
+
+// Route movie
+Route::get('movie',[MovieController::class,'getMovie']);
+Route::get('movie/{id}',[MovieController::class,'getMovieById']);
