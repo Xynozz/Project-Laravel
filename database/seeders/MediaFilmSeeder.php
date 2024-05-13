@@ -19,85 +19,85 @@ class MediaFilmSeeder extends Seeder
             'film_id' => 1,
             'media_type' => 1,
             'media_title' => 'Nyobain Barang Aneh',
-            'url_media' => 'https://www.youtube.com/watch?v=O_9m6YEhMiA',
+            'url_media' => 'O_9m6YEhMiA',
         ]);
         MediaFilm::insert([
             'film_id' => 1,
             'media_type' => 1,
             'media_title' => '100 Fakta Kratos',
-            'url_media' => 'https://www.youtube.com/watch?v=sSIPpA5eLVY',
+            'url_media' => 'sSIPpA5eLVY',
         ]);
         MediaFilm::insert([
             'film_id' => 1,
             'media_type' => 1,
             'media_title' => 'Podcast',
-            'url_media' => 'https://www.youtube.com/watch?v=fp2aEGuCbKM',
+            'url_media' => 'fp2aEGuCbKM',
         ]);
         MediaFilm::insert([
             'film_id' => 1,
             'media_type' => 1,
             'media_title' => 'Boboboy Galaxy',
-            'url_media' => 'https://www.youtube.com/watch?v=zMjSIjOqARc',
+            'url_media' => 'zMjSIjOqARc',
         ]);
         MediaFilm::insert([
             'film_id' => 1,
             'media_type' => 1,
             'media_title' => 'The Spider',
-            'url_media' => 'https://www.youtube.com/watch?v=1-tc2YlCqCk',
+            'url_media' => '1-tc2YlCqCk',
         ]);
         MediaFilm::insert([
             'film_id' => 2,
             'media_type' => 1,
             'media_title' => 'End Of Beginning',
-            'url_media' => 'https://www.youtube.com/watch?v=Ek4fancdwPk',
+            'url_media' => 'Ek4fancdwPk',
         ]);
         MediaFilm::insert([
             'film_id' => 2,
             'media_type' => 1,
             'media_title' => 'Review Laptop 70 juta',
-            'url_media' => 'https://www.youtube.com/watch?v=Up5kkJ0hEU0',
+            'url_media' => 'Up5kkJ0hEU0',
         ]);
         MediaFilm::insert([
             'film_id' => 2,
             'media_type' => 1,
             'media_title' => 'Review Skin Nolan',
-            'url_media' => 'https://www.youtube.com/watch?v=wEP940Ieta4',
+            'url_media' => 'wEP940Ieta4',
         ]);
         MediaFilm::insert([
             'film_id' => 2,
             'media_type' => 1,
             'media_title' => 'Bantai Bermuda',
-            'url_media' => 'https://www.youtube.com/watch?v=gwhESUBmMfY',
+            'url_media' => 'gwhESUBmMfY',
         ]);
         MediaFilm::insert([
             'film_id' => 2,
             'media_type' => 1,
             'media_title' => 'Rakit Pc 700Ribu',
-            'url_media' => 'https://www.youtube.com/watch?v=9XVlqgtkn4U',
+            'url_media' => '9XVlqgtkn4U',
         ]);
         MediaFilm::insert([
             'film_id' => 3,
             'media_type' => 1,
             'media_title' => 'Gacha Skin PUBG',
-            'url_media' => 'https://www.youtube.com/watch?v=aQFe2NkV4TA',
+            'url_media' => 'aQFe2NkV4TA',
         ]);
         MediaFilm::insert([
             'film_id' => 3,
             'media_type' => 1,
             'media_title' => 'Kebodohan Bermain',
-            'url_media' => 'https://www.youtube.com/watch?v=TQv68wtddMw&t=506s&pp=ygUHbWlseWh5YQ%3D%3D',
+            'url_media' => 'TQv68wtddMw&t=506s&pp=ygUHbWlseWh5YQ%3D%3D',
         ]);
         MediaFilm::insert([
             'film_id' => 3,
             'media_type' => 1,
             'media_title' => 'Iphone 15 HDC',
-            'url_media' => 'https://www.youtube.com/watch?v=D8n0apF7EhM',
+            'url_media' => 'D8n0apF7EhM',
         ]);
         MediaFilm::insert([
             'film_id' => 3,
             'media_type' => 1,
             'media_title' => 'Main OmeTv',
-            'url_media' => 'https://www.youtube.com/watch?v=vNsMda2xSjo',
+            'url_media' => 'vNsMda2xSjo',
         ]);
         MediaFilm::insert([
             'film_id' => 3,

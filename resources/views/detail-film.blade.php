@@ -23,7 +23,9 @@
                 <div class="card shadow-sm">
                     <div class="card shadow-sm">
                         @if ($item->media_type)
-                        Url Media : {{$item->media_title}} <a href="{{ $item->url_media }}" align="center">Klik Disini</a>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/{{ $item->url_media }}">
+                        </iframe>
+                        {{-- Url Media : {{$item->media_title}} <a href="{{ $item->url_media }}" align="center">Klik Disini</a> --}}
                         @else
                         <img src="{{ $item->url_media }}" alt="" height="200px" width="200px" >
                         @endif
