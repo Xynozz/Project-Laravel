@@ -3,6 +3,7 @@
 <div class="album py-5">
     <div class="container">
         <div class="row">
+            <h1 style="text-align: center" class="album py-4">Daftar Artikel</h1>
             @foreach ($artikel as $item )
             <div class="col">
                 <div class="shadow p-3 mb-5 bg-body rounded" align="center" style="width: 14rem;">
