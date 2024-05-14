@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 // import Movie Controller
 use App\Http\Controllers\MovieController;
+// import Artikel Controller
+use App\Http\Controllers\ArtikelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,3 +82,9 @@ Route::get('hewan',[App\Http\Controllers\MyController::class,'animals']);
 // Route movie
 Route::get('movie',[MovieController::class,'getMovie']);
 Route::get('movie/{id}',[MovieController::class,'getMovieById']);
+
+//Route Artikel
+Route::get('artikel',[ArtikelController::class,'getArtikel']);
+Route::get('artikel/{id}', [ArtikelController::class, 'getArtikelById']);
+Route::get('artikel/kategori/{kategori}', [ArtikelController::class, 'getArtikelByKategori']);
+
