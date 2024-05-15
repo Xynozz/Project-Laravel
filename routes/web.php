@@ -11,6 +11,7 @@ use App\Http\Controllers\MyController;
 use App\Http\Controllers\MovieController;
 // import Artikel Controller
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\PenulisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,3 +93,6 @@ Route::get('artikel/kategori/{kategori}', [ArtikelController::class, 'getArtikel
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route crud
+Route::resource('penulis', PenulisController::class);
