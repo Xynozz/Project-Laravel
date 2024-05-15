@@ -88,3 +88,7 @@ Route::get('artikel',[ArtikelController::class,'getArtikel']);
 Route::get('artikel/{id}', [ArtikelController::class, 'getArtikelById']);
 Route::get('artikel/kategori/{kategori}', [ArtikelController::class, 'getArtikelByKategori']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

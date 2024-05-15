@@ -56,7 +56,7 @@
 <body>
 
   {{-- Start Header --}}
-    @include('layout.header')
+    @include('layouts.header')
   {{-- End Header --}}
 
     <main class="py-4">
@@ -67,7 +67,7 @@
     </main>
 
     {{-- Start Header --}}
-    @include('layout.footer')
+    @include('layouts.footer')
     {{-- End Header --}}
 
     <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"
