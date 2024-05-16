@@ -20,22 +20,11 @@ class PenulisController extends Controller
         return view('penulis.index', compact('penulis'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('penulis.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorePenulisRequest  $request
-     * @return \Illuminate\Http\Response
-     */
     // public function store(StorePenulisRequest $request)
     public function store(Request $request)
     {
@@ -52,12 +41,6 @@ class PenulisController extends Controller
         return redirect()->route('penulis.index')->with('success', 'data berhasil ditambahkan');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Penulis  $penulis
-     * @return \Illuminate\Http\Response
-     */
     // public function show(Penulis $penulis)
     public function show($id)
     {
@@ -65,12 +48,6 @@ class PenulisController extends Controller
         return view('penulis.show', compact('penulis'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Penulis  $penulis
-     * @return \Illuminate\Http\Response
-     */
     // public function edit(Penulis $penulis)
     public function edit($id)
     {
@@ -78,13 +55,6 @@ class PenulisController extends Controller
         return view('penulis.edit', compact('penulis'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatePenulisRequest  $request
-     * @param  \App\Models\Penulis  $penulis
-     * @return \Illuminate\Http\Response
-     */
     // public function update(UpdatePenulisRequest $request, Penulis $penulis)
     public function update(Request $request, $id)
     {
@@ -102,12 +72,6 @@ class PenulisController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Penulis  $penulis
-     * @return \Illuminate\Http\Response
-     */
     // public function destroy(Penulis $penulis)
     public function destroy($id)
     {

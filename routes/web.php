@@ -12,6 +12,8 @@ use App\Http\Controllers\MovieController;
 // import Artikel Controller
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\PenulisController;
+use App\Http\Controllers\GenreController;
+use App\Http\Controllers\BukuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +48,7 @@ Route::get('/about', function () {
 });
 
 // parameter
-Route::get('/sample/{nama}/{kelas}', function ( Request $request, $nama, $kelas) {
+Route::get('/sample/{nama}/{kelas}', function (Request $request, $nama, $kelas) {
     $nama2 = $nama;
     $kelas2 = $kelas;
     return view('sample',compact('nama2','kelas2'));
@@ -96,3 +98,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Route crud
 Route::resource('penulis', PenulisController::class);
+
+// Route crud
+Route::resource('genre', GenreController::class);
+
+// Route crud
+Route::resource('buku', BukuController::class);
