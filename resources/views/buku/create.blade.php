@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">Data Buku
                     <a href="{{route('buku.index')}}" class="btn btn-sm btn-primary" style="float: right">Kembali</a>
@@ -22,8 +22,6 @@
                                     </span>
                                     @enderror
                                 </div>
-                            </div>
-                            <div class="col">
                                 <div class="mb-2">
                                     <label for="">Jumlah Halaman</label>
                                     <input type="number" class="form-control @error('jml_halaman') is-invalid @enderror"
@@ -35,8 +33,6 @@
                                     @enderror
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col">
                                 <div class="mb-2">
                                     <label for="">ISBN</label>
@@ -48,8 +44,6 @@
                                     </span>
                                     @enderror
                                 </div>
-                            </div>
-                            <div class="col">
                                 <div class="mb-2">
                                     <label for="">Tanggal Terbit</label>
                                     <input type="date" class="form-control @error('tgl_terbit') is-invalid @enderror"

@@ -7,8 +7,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <li class=""">
+                    <h3 >{{Auth::user()->name}}</h3>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('genre.index')}}">Genre</a>
@@ -21,20 +21,19 @@
                 </li>
             </ul>
             @guest
-                <a href="{{url('login')}}" class="btn btn-outline-success">Login</a>
-                <a href="{{url('register')}}" class="btn btn-outline-success">Register</a>
-@else
-                <p style="color: blue">{{Auth::user()->name}}</p>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{url('logout')}}" class="btn btn-outline-primary" onclick="event.preventDefault();
+            <a href="{{url('login')}}" class="btn btn-outline-success">Login</a>
+            <a href="{{url('register')}}" class="btn btn-outline-success">Register</a>
+            @else
+            <ul class="list-unstyled">
+                <li>
+                    <a href="{{url('logout')}}" class="btn btn-outline-primary" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">Logout</a>
-                    </li>
-                    {{-- form Untuk Logout --}}
-                    <form action="{{route('logout')}}" method="post" id="logout-form">
-                        @csrf
-                    </form>
-                </ul>
+                </li>
+                {{-- form Untuk Logout --}}
+                <form action="{{route('logout')}}" method="post" id="logout-form">
+                    @csrf
+                </form>
+            </ul>
             @endguest
             </form>
         </div>

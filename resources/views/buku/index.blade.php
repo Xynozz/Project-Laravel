@@ -22,8 +22,8 @@
                         <tr>
                             <td>{{$no++}}</td>
                             <td>{{$item->judul}}</td>
-                            <td>{{$item->nama_penulis}}</td>
-                            <td><img src="{{asset('images/buku' .$item->cover)}}" alt="" style="width: 100px"></td>
+                            <td>{{$item->penulis->nama_penulis}}</td>
+                            <td><img src="{{asset('images/buku/' .$item->cover)}}" alt="" style="width: 200px"></td>
                             <td>
                                 <form action="{{route('buku.destroy', $item->id)}}" method="POST">
                                     @method('DELETE')

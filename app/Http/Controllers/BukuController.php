@@ -83,22 +83,21 @@ class BukuController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
-            'judul' => 'required|unique:bukus',
+            'judul' => 'required',
             'isbn' => 'required',
             'deskripsi' => 'required',
             'jml_halaman' => 'required|numeric',
             // 'cover' => 'required|max:2048kb|mimes:png,jpg',
-            'tgl_terbit' => 'required',
-            'penulis_id' => 'required',
+            'id_penulis' => 'required',
         ]);
 
-        $buku = Buku::findOrFail();
+        $buku = Buku::findOrFail($id);
         $buku->judul = $request->judul;
         $buku->isbn = $request->isbn;
         $buku->deskripsi = $request->deskripsi;
         $buku->jml_halaman = $request->jml_halaman;
         $buku->tgl_terbit = $request->tgl_terbit;
-        $buku->penulis_id = $request->penulis_id;
+        $buku->id_penulis = $request->id_penulis;
 
         // upload Foto
         if ($request->hasFile('cover')) {
