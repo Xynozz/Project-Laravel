@@ -9,11 +9,12 @@ use App\Models\Penulis;
 
 class PenulisController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $penulis = Penulis::orderBy('id', 'desc')->get();

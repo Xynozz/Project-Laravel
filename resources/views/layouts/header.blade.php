@@ -8,9 +8,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class=""">
-                    <h3 >{{Auth::user()->name}}</h3>
                 </li>
-                <li class="nav-item">
+                <li class=" nav-item">
                     <a class="nav-link" href="{{route('genre.index')}}">Genre</a>
                 </li>
                 <li class="nav-item">
@@ -26,10 +25,14 @@
             @else
             <ul class="list-unstyled">
                 <li>
+                                    <h3>{{Auth::user()->name}}</h3>
+                                </li>
+                <li>
                     <a href="{{url('logout')}}" class="btn btn-outline-primary" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">Logout</a>
                 </li>
                 {{-- form Untuk Logout --}}
+
                 <form action="{{route('logout')}}" method="post" id="logout-form">
                     @csrf
                 </form>

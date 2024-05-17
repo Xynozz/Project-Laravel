@@ -26,4 +26,11 @@ class Buku extends Model
         return $this->belongsToMany(Genre::class, 'genre_buku', 'id_genre', 'id_buku');
 
     }
+    // Menghapus Foto
+    public function deleteImage(){
+        if ($this->cover && file_exists(public_path('images/buku' . $this->cover))){
+            return unlink(public_path('images/buku/' . $this->cover));
+        }
+    }
+
 }
